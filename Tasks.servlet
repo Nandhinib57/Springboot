@@ -1,0 +1,282 @@
+package task;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
+/**
+ * Servlet implementation class studentservlet
+ */
+@WebServlet("/studentservlet")
+public class studentservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public studentservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+	PrintWriter out=response.getWriter();
+      	out.print("<h1>Hello world</h2>");
+  int a=Integer.parseInt(request.getParameter("a"));
+    int b=Integer.parseInt(request.getParameter("b"));
+    int addition=a+b;
+    int subtraction=a-b;
+    int multiplication=a*b;
+    out.print("<h2>calculate two number</h2>");
+    out.print("<p>addition:"+addition+"</p>");
+    out.print("<p>subtraction:"+subtraction+"</p>");
+    out.print("<p>multiplication:"+multiplication+"</p>");
+    if(b!=0) {
+    	int division=a/b;
+    	out.print("<p>division:"+division+"</p>");
+    }
+    else {
+    	out.print("<p>division cannot divisible by zero");
+    }
+    
+	} 
+package task;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
+/**
+ * Servlet implementation class studentservlet
+ */
+@WebServlet("/studentservlet")
+public class studentservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public studentservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+	PrintWriter out=response.getWriter();
+      	out.print("<h1>Hello world</h2>");
+      
+     String name=request.getParameter("Employee name");
+     String id=request.getParameter( "Employee id");
+     String salary =request.getParameter( "salary");
+     String department=request.getParameter( "department");
+     out.print("<h2>Employee Details</h2>");
+     out.print("<p>Employee Name:"+name+"</p>");
+     out.print("<p>Employee id:"+id+"</p>");
+     out.print("salary:"+salary+"</p>");
+     out.print("Department:"+department+"</p>");
+	}
+
+package task;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
+/**
+ * Servlet implementation class studentservlet
+ */
+@WebServlet("/studentservlet")
+public class studentservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public studentservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+	PrintWriter out=response.getWriter();
+      	out.print("<h1>Hello world</h2>");
+  	String value=request.getParameter("number");
+   	int number=Integer.parseInt(value);
+   	if(number%2==0)
+   	{
+   		out.print("<h2>"+number+"is Even</h2>");
+   	}
+   	else {
+   		out.print("<h2>"+number+"is Odd</h2>");
+   	}
+	}
+
+package task;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
+/**
+ * Servlet implementation class studentservlet
+ */
+@WebServlet("/studentservlet")
+public class studentservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public studentservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+	PrintWriter out=response.getWriter();
+      	out.print("<h1>Hello world</h2>");
+    
+	
+     int number=Integer.parseInt(request.getParameter("number"));
+     int factorial=1;
+     for(int i=1;i<=number;i++) {
+    	 factorial=factorial*i;
+     }
+     out.print("<h2>factorial ="+factorial+"</h2>") ;
+	}
+	package task;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
+/**
+ * Servlet implementation class studentservlet
+ */
+@WebServlet("/studentservlet")
+public class studentservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public studentservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+	PrintWriter out=response.getWriter();
+      	out.print("<h1>Hello world</h2>");	
+	
+    String name=request.getParameter("name");
+    int mark=Integer.parseInt(request.getParameter("mark"));
+    String grade;
+    if(mark>=90) {
+    	grade="A";
+    }
+    else if(mark>=80) {
+    	grade="B";
+	}
+	    else if(mark>=70) {
+    	grade="C";
+    }
+    else if(mark>=60) {
+    	grade="D";
+    }
+    else if(mark>=50) {
+    	grade="E";
+   } 
+      	else {
+   	grade="Fail";
+    }
+    out.print("<h2>Student Result</h2>");
+    out.print("Name:"+name+"<br>");
+    out.print("Mark:"+mark+"<br>");
+   out.print("Grade:"+grade);
+      	}
+	
+	
+
+
+
